@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  dns-app-container:
+    image: dns-app:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/dns-app
+    ports:
+      - "8080:8080"
